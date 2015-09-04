@@ -18,6 +18,11 @@
 require "docking_station"
 
 describe DockingStation do
+  it "has a default capacity" do
+    expect(subject.capacity).to eq subject.class::DEFAULT_CAPACITY
+  end
+  # it { is_expected.to respond_to :capacity }
+
   it { is_expected.to respond_to :release_bike }
 
   it "releases working bikes" do
